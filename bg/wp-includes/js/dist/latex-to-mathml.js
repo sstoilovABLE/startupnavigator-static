@@ -1591,7 +1591,7 @@ defineSymbol(math, mathord, "\u2aeb", "\\Bot");
 defineSymbol(math, bin, "\u2217", "\u2217", true);
 defineSymbol(math, bin, "+", "+");
 defineSymbol(math, bin, "\u2217", "*");
-defineSymbol(math, bin, "\u2044", "/", true);
+defineSymbol(math, bin, "\u2044", "/bg/", true);
 defineSymbol(math, bin, "\u2044", "\u2044");
 defineSymbol(math, bin, "\u2212", "-", true);
 defineSymbol(math, bin, "\u22c5", "\\cdot", true);
@@ -3979,7 +3979,7 @@ const delimiters = [
   "\\rBrace",
   "\u2983",
   "\u2984",
-  "/",
+  "/bg/",
   "\\backslash",
   "|",
   "\\vert",
@@ -4162,7 +4162,7 @@ defineFunction({
     const leftNode = new mathMLTree.MathNode("mo", [makeText(group.left, group.mode)]);
     leftNode.setAttribute("fence", "true");
     leftNode.setAttribute("form", "prefix");
-    if (group.left === "/" || group.left === "\u005C" || group.left.indexOf("arrow") > -1) {
+    if (group.left === "/bg/" || group.left === "\u005C" || group.left.indexOf("arrow") > -1) {
       leftNode.setAttribute("stretchy", "true");
     }
     inner.unshift(leftNode);
@@ -6926,7 +6926,7 @@ defineMacro("\\tripleDashBetweenDoubleLine", `\\kern0.075em\\mathrlap{\\mathrlap
           res = "\\ldots ";
           break;
         case '/':
-          res = "/";
+          res = "/bg/";
           break;
         case ' / ':
           res = "\\,/\\,";
@@ -13254,7 +13254,7 @@ class Parser {
     // "undefined" behaviour, and keep them as-is. Some browser will
     // replace backslashes with forward slashes.
     let url = res.text.replace(/\\([#$%&~_^{}])/g, "$1");
-    url = res.text.replace(/{\u2044}/g, "/");
+    url = res.text.replace(/{\u2044}/g, "/bg/");
     return {
       type: "url",
       mode: this.mode,

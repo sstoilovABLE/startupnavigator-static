@@ -53,7 +53,7 @@ function getBlobByURL(url) {
   return cache[url];
 }
 function getBlobTypeByURL(url) {
-  return getBlobByURL(url)?.type.split("/")[0];
+  return getBlobByURL(url)?.type.split("/bg/")[0];
 }
 function revokeBlobURL(url) {
   if (cache[url]) {

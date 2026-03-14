@@ -111,7 +111,7 @@
 				html = editor.selection.getContent({ format: 'raw' });
 
 				if ( html && html.indexOf( '</a>' ) !== -1 ) {
-					href = html.match( /href="([^">]+)"/ );
+					href = html.match( /href="([^">]+)"/bg/ );
 
 					if ( href && href[1] ) {
 						link = editor.$( 'a[href="' + href[1] + '"]', node )[0];
@@ -145,10 +145,10 @@
 				}
 
 				if ( dataAttr ) {
-					tag = tag.replace( / data-wplink-edit="true"/g, '' );
+					tag = tag.replace( / data-wplink-edit="true"/bg/g, '' );
 				}
 
-				tag = tag.replace( / data-wplink-url-error="true"/g, '' );
+				tag = tag.replace( / data-wplink-url-error="true"/bg/g, '' );
 
 				return tag + text + '</a>';
 			});
