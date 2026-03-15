@@ -42,9 +42,8 @@ To use a CMS again, a maintainer would need to:
 
 To maintain the site's live status, do not modify these configurations:
 
-* **CNAME File:** The file named `CNAME` in the root must remain. It maps `councilleaders.org` to this repository.
-* **DNS Configuration:** The Cloudflare DNS for `councilleaders.org` is set to **DNS Only** (Grey Cloud) to ensure GitHub Pages can manage the SSL certificate renewal.
-* **Paths:** All internal links are **Absolute**, pointing to `https://councilleaders.org/`.
+* **CNAME File:** The file named `CNAME` in the root must remain. It maps `sun.able.bg` to this repository.
+* **DNS Configuration:** The Cloudflare DNS for `sun.able.bg` is set to **DNS Only** (Grey Cloud) to ensure GitHub Pages can manage the SSL certificate renewal.
 
 ---
 
